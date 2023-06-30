@@ -21,13 +21,16 @@ import "react-toastify/dist/ReactToastify.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Navigation from "./components/Navigation";
+import Landing from "./pages/Landing";
+
 AOS.init();
 
 function App() {
   const [activeState, setActiveState] = useState("all");
   const [activeTone, setActiveTone] = useState(false);
   const [topicList, setTopicList] = useState([
-     // Initial topic list
+    // Initial topic list
     // Each topic contains a category, topicId, topic, and tags
 
     {
@@ -206,7 +209,7 @@ function App() {
     setTopicList(topicList.filter((item) => item.topicId !== topicId));
   };
 
-// Handle topic add
+  // Handle topic add
   const handleTopicAdd = (topic) => {
     setTopicList([topic, ...topicList]);
   };
@@ -216,7 +219,7 @@ function App() {
     setCurrentBlog(blogData);
   };
 
- // Handle resetting blog
+  // Handle resetting blog
   const handleResetBlog = () => {
     setCurrentBlog("");
   };
@@ -250,11 +253,12 @@ function App() {
           pauseOnHover={false}
           theme="light"
         />
+        <Navigation/>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/preview/:blogId" element={<Preview />} />
           <Route path="/editor/:topicId" element={<Editor />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
       </TopicContext.Provider>
     </>

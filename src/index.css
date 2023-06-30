@@ -87,3 +87,14 @@
 .blog-content h6 {
   @apply text-sm font-bold;
 }
+
+
+.btn {
+  @apply bg-blue-ribbon-600 hover:bg-blue-ribbon-700 active:bg-blue-ribbon-800
+}
+
+.hero {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+
+}

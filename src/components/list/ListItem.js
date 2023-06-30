@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Modal from "../../utils/Modal";
 
 // Component for rendering a single list item
-const ListItem = ({ data }) => {
+const ListItem = ({ data, key }) => {
   // Accessing functions and states from the context
   const { handleTopicDelete, activeTone, setActiveTone } = useContext(Context);
 
@@ -34,7 +34,10 @@ const ListItem = ({ data }) => {
 
   // Rendering the list item
   return (
-    <div className=" sm:flex  sm:flex-nowrap  justify-between items-center border-b p-4 gap-3">
+    <div
+      key={key}
+      className=" sm:flex  sm:flex-nowrap  justify-between items-center border-b p-4 gap-3"
+    >
       <div className="flex-1">
         {/* Displaying topic title */}
         <h6 className="font-medium text-sm">{data.topic}</h6>

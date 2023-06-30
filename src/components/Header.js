@@ -28,7 +28,7 @@ const Header = () => {
       >
         {/* Headings */}
         <div className="lg:w-8/12 md:w-9/12 w-10/12 mx-auto  ">
-          <div className=" text-gray-400 text-xs font-medium flex gap-2 items-center">
+          {/* <div className=" text-gray-400 text-xs font-medium flex gap-2 items-center">
             <FontAwesomeIcon icon={faHome} size="sm" />
             <FontAwesomeIcon icon={faGreaterThan} size="xs" />
             <span>Topic</span>
@@ -36,7 +36,7 @@ const Header = () => {
             <span>Categories</span>
             <FontAwesomeIcon icon={faGreaterThan} size="xs" />
             <span className="text-black capitalize">{activeState}</span>
-          </div>
+          </div> */}
           <h3 className="text-2xl font-bold mt-3">Categories</h3>
         </div>
       </div>
