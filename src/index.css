@@ -88,13 +88,28 @@
   @apply text-sm font-bold;
 }
 
-
 .btn {
-  @apply bg-blue-ribbon-600 hover:bg-blue-ribbon-700 active:bg-blue-ribbon-800
+  @apply bg-blue-ribbon-600 hover:bg-blue-ribbon-700 active:bg-blue-ribbon-800;
 }
+
+/* landing page  */
 
 .hero {
   background-image: url("./assets/image.jpg");
   background-size: cover;
+}
 
+.slider-icons {
+  @apply bg-blue-ribbon-50 h-7 w-7 rounded-full flex items-center justify-center;
+}
+.slider-container {
+  @apply flex items-center gap-3 py-2 px-3 rounded-full hover:text-white hover:bg-blue-ribbon-600;
+}
+
+.features-icon {
+  @apply h-14 w-14 bg-blue-ribbon-50 rounded-lg items-center justify-center text-blue-ribbon-600;
+}
+
+.features-container {
+  @apply flex md:items-center md:flex-row flex-col items-start gap-5 p-3  text-gray-700;
 }
