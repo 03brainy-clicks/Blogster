@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -17,11 +18,12 @@ const Navigation = () => {
       </div>
       <div>
         <ul className="flex gap-5 items-center text-gray-600">
-          <li className=" cursor-pointer hover:text-black ">Login</li>
+          <li className=" cursor-pointer hover:text-black "><Link to={"/login"}>Login</Link></li>
           <li>
-            <button className="btn py-2  px-5 rounded text-white cursor-pointer">
+          <Link to={"/signup"}>
+          <button className="btn py-2  px-5 rounded text-white cursor-pointer">
               Get started
-            </button>
+            </button></Link>
           </li>
         </ul>
       </div>

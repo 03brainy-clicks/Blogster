@@ -14,15 +14,17 @@ import Editor from "./pages/Editor";
 import "react-quill/dist/quill.snow.css";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+
 import Preview from "./pages/Preview";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import Navigation from "./components/Navigation";
 import Landing from "./pages/Landing";
+import Login from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
+import ResetPassword from "./pages/ResetPassword";
 
 AOS.init();
 
@@ -253,8 +255,11 @@ function App() {
           pauseOnHover={false}
           theme="light"
         />
-        <Navigation/>
+
         <Routes>
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/preview/:blogId" element={<Preview />} />
           <Route path="/editor/:topicId" element={<Editor />} />
