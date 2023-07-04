@@ -2,6 +2,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { validEmail, validPassword } from "../utils/Regex";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +10,36 @@ const SignUp = () => {
   const [emailErr, setEmailErr] = useState(false);
   const [pwdError, setPwdError] = useState(false);
   const navigate = useNavigate();
+
+  const reset = () => {
+    setEmailErr(false);
+    setPwdError(false);
+  };
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    reset();
+
+    if (!validEmail.test(email)) {
+      setEmailErr(true);
+      return null;
+    }
+
+    if (!validPassword.test(password)) {
+      setPwdError(true);
+      return null;
+    }
+
+    if (email && password && !emailErr && !pwdError) {
+      //
+      console.log("Sign Up success");
+      return true;
+    } else {
+      console.log("signup failed");
+      return null;
+    }
+    //
+  };
 
   return (
     <div className="">
@@ -68,7 +99,10 @@ const SignUp = () => {
               )}
             </div>
             <div className="mt-2">
-              <button className=" transition text-sm  rounded duration-200  py-2 px-5 text-white btn w-full">
+              <button
+                onClick={handleSignUp}
+                className=" transition text-sm  rounded duration-200  py-2 px-5 text-white btn w-full"
+              >
                 Sign Up
               </button>
               <Link to={"/"}>
