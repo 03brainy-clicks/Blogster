@@ -69,69 +69,178 @@ const Landing = () => {
               </div>
             </div>
             {/* image grid  */}
-            <div className="flex gap-5 justify-between items-center mx-auto my-10   md:w-4/5 w-full">
-              <div className="flex-1 space-y-5">
-                <ImageCard
-                  image={
-                    "https://images.pexels.com/photos/270220/pexels-photo-270220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  }
-                  alt={"Crime"}
-                />
-              </div>{" "}
-              <div className="flex-1 space-y-5">
-                <ImageCard
-                  image={
-                    "https://images.pexels.com/photos/6477658/pexels-photo-6477658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  }
-                  alt={"Riots"}
-                />
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Crypto "}
-                />
-              </div>{" "}
-              <div className="flex-1 space-y-5">
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Tourism"}
-                />
-                <ImageCard
-                  image={
-
-"https://images.pexels.com/photos/3059654/pexels-photo-3059654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Education"}
-                />{" "}
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Industry"}
-                />
-              </div>
-              <div className="flex-1 space-y-5">
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/1464210/pexels-photo-1464210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Politics"}
-                />
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Sports"}
-                />
-              </div>
-              <div className="flex-1 space-y-5">
-                <ImageCard
-                  image={
-"https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"                  }
-                  alt={"Space"}
-                />
-              </div>
+            <div className=" justify-between flex flex-col gap-5 items-center mx-auto my-16 relative overflow-hidden w-full">
+              <Marquee pauseOnHover={true} >
+                <div className="flex gap-5  ">
+                  <div className="ml-5">
+                    <ImageCard
+                      className="ml-11"
+                      image={
+                        "https://images.pexels.com/photos/270220/pexels-photo-270220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      alt={"Crime"}
+                    />
+                  </div>
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Tourism"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/3059654/pexels-photo-3059654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Education"}
+                  />{" "}
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Industry"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/1464210/pexels-photo-1464210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Politics"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Sports"}
+                  />
+                  <ImageCard  
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Space"}
+                  />
+                </div>
+              </Marquee>
+              <Marquee pauseOnHover={true}  direction="right">
+                <div className="flex gap-5">
+                  <div className="ml-5">
+                    <ImageCard
+                      image={
+                        "https://images.pexels.com/photos/586030/pexels-photo-586030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      alt={"Mars"}
+                    />
+                  </div>
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Finance"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/5279346/pexels-photo-5279346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Engine"}
+                  />{" "}
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/256229/pexels-photo-256229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Bomb"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/60132/pexels-photo-60132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"SpaceX"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/3800517/pexels-photo-3800517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Cricket"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/144200/pexels-photo-144200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Insects"}
+                  />
+                </div>
+              </Marquee>
+              <Marquee pauseOnHover={true}  direction="left">
+                <div className="flex gap-5  ">
+                  <div className="ml-5">
+                    <ImageCard
+                      image={
+                        "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      alt={"Cars"}
+                    />
+                  </div>
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/5803142/pexels-photo-5803142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Bikes"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Video games"}
+                  />{" "}
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Cats"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+"https://images.pexels.com/photos/70080/elephant-africa-african-elephant-kenya-70080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  "                    }
+                    alt={"Wildlife"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/7256547/pexels-photo-7256547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Flamingo"}
+                  />
+                  <ImageCard
+                    className=""
+                    image={
+                      "https://images.pexels.com/photos/2397653/pexels-photo-2397653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    }
+                    alt={"Ocean"}
+                  />
+                </div>
+              </Marquee>
             </div>
             {/* topics  */}
-            <div className="flex flex-col gap-3 pt-5">
-              <Marquee pauseOnHover={true} className="rounded-full">
+            <div className="flex flex-col gap-3 mt-14">
+              <Marquee
+                pauseOnHover={true}
+                
+                direction="right"
+                className="rounded-full"
+              >
                 <div className="flex gap-11">
                   <div className="slider-container ml-11">
                     <div className=" slider-icons">
@@ -245,11 +354,7 @@ const Landing = () => {
                   </div>
                 </div>
               </Marquee>{" "}
-              <Marquee
-                pauseOnHover={true}
-                direction="right"
-                className="rounded-full"
-              >
+              <Marquee pauseOnHover={true}  className="rounded-full">
                 <div className="flex gap-11">
                   <div className="slider-container ml-11">
                     <div className=" slider-icons">
